@@ -4,6 +4,10 @@ const Forever: number = -2
  * 淘汰策略：定时 + 懒汉
  */
 class LocalStorage {
+  constructor() {
+    this.start()
+  }
+
   /**
    * 开始监视每个 localStorage 的有效期
    */
@@ -100,4 +104,4 @@ function lookup(key) {
   }
 }
 
-export default new LocalStorage()
+export default LocalStorage

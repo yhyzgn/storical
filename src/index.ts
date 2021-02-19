@@ -1,14 +1,11 @@
 import {App} from 'vue'
+import LocalStorage from "./stg/local"
 
-import ls from "./stg/local"
-
-const LS = {
-  version: "1.0.0-bata.1",
-  install: (app: App) => {
-    ls.start()
-    app.config.globalProperties.$ls = ls
-  },
-  ls: ls
+class LS extends LocalStorage {
+  install(app: App): void {
+    app.config.globalProperties.$ls = this
+  }
 }
 
-export default LS
+const ls = new LS()
+export default ls
