@@ -1,22 +1,25 @@
 {
-    "name": "storical",
-    "version": "1.0.0",
-    "description": "localStorage with expiry time.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "localStorage",
-        "sessionStorage",
-        "cache",
-        "expiry",
-        "cookie"
-    ],
-    "author": "yhyzgn",
-    "license": "ISC",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/yhyzgn/storical.git"
-    }
+  "name": "vue-ls-plus",
+  "version": "1.0.0-bata.1",
+  "description": "localStorage with expiry time.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "localStorage",
+    "sessionStorage",
+    "cache",
+    "expiry",
+    "cookie"
+  ],
+  "author": "yhyzgn",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yhyzgn/vue-ls-plus.git"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  }
 }
