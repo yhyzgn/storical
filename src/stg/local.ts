@@ -85,18 +85,18 @@ function lookup(key) {
     try {
       const temp = JSON.parse(jTemp);
       if (typeof temp == 'object' && temp) {
-        let expiry = temp.expiry;
+        const expiry = temp.expiry;
         // expiry !== Forever && expiry > 0 时，才控制到期时间
         if (expiry !== Forever && expiry > 0) {
           // 对比是否过期
-          expiry = new Date(temp).getTime() - new Date().getTime();
-          if (expiry <= 0) {
+          const interval = new Date(expiry).getTime() - new Date().getTime();
+          if (interval <= 0) {
             localStorage.removeItem(key)
             return;
           }
           setTimeout(function () {
             localStorage.removeItem(key);
-          }, expiry);
+          }, interval);
         }
       }
     } catch (ignored) {
